@@ -15,11 +15,14 @@ export default async function handler(req, res) {
     const response = await api.get("/search", {
         params: {
             q: query,
+            type: "video",
+            videoCategoryId: 10,
+            safeSearch: "moderate",
+            maxResults: 5,
+            order: "viewCount"
         },
     });
     const videos = response.data.items;
-    const videoList = Array.from(videos).filter((i) => (i.id.videoId)).reverse().map((post) => {
-        return post ? post : null;
-    })
+    const videoList = Array.from(videos);
     return res.status(201).json(videoList);
 }
