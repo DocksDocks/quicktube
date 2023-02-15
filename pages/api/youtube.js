@@ -19,7 +19,7 @@ export default async function handler(req, res) {
             videoCategoryId: 10,
             safeSearch: "moderate",
             maxResults: 5,
-            order: "viewCount"
+            // order: "viewCount"
         },
     });
     const videos = response.data.items;
