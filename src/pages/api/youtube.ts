@@ -1,7 +1,8 @@
 import axios from "axios";
+import { NextApiRequest, NextApiResponse } from "next";
 
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
     const query = req.body;
     const api = axios.create({
