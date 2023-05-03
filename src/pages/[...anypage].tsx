@@ -35,7 +35,7 @@ export default function Video() {
     return (
         <div className={`bg-slate-700 w-screen h-screen relative`}>
             <Head>
-                <title>Movies</title>
+                <title>Videos</title>
             </Head>
             <div>
                 <main className={`${styles.main}`}>
